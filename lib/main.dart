@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lorem_ipsum/view/login_screens/home/homescreen_.dart';
 import 'package:lorem_ipsum/view/login_screens/splash_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
  debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: homescreenpage(),
     );
   }
 }

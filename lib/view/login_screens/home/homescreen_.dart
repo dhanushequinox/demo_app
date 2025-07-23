@@ -24,7 +24,7 @@ class _homescreenpageState extends State<homescreenpage> {
 
                 const SizedBox(height: 20),
 
-                YourCarouselWidget(),
+                const YourCarouselWidget(),
 
                 const SizedBox(height: 20),
 
@@ -34,12 +34,14 @@ class _homescreenpageState extends State<homescreenpage> {
                 const SizedBox(height: 30),
 
                 // Product Type Section
-                _buildProductTypeSection(),
+                CarouselCardSlider(),
 
                 const SizedBox(height: 30),
 
                 // Promotional Cards Section
                 _buildPromotionalCardsSection(),
+                                // Product Type Section
+CarouselCardSlidersecond(),
 
                 const SizedBox(height: 30),
 
@@ -229,7 +231,7 @@ class _homescreenpageState extends State<homescreenpage> {
       margin: const EdgeInsets.only(right: 15),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Container(
@@ -258,312 +260,49 @@ class _homescreenpageState extends State<homescreenpage> {
     );
   }
 
-  Widget _buildProductTypeSection() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(
-            'Product Type',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        const SizedBox(height: 15),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: const Row(
-              children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage:
-                      AssetImage('asset/images/Group 1171274916.png'),
-                ),
-                SizedBox(width: 15),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '#230942944',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      'Designation',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 15),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            height: 120,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              image: const DecorationImage(
-                image: AssetImage('asset/images/Group 1171274916.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Stack(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Colors.transparent,
-                        Colors.black.withOpacity(0.7),
-                      ],
-                    ),
-                  ),
-                ),
-                const Center(
-                  child: Icon(
-                    Icons.play_circle_filled,
-                    color: Colors.white,
-                    size: 50,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
   Widget _buildPromotionalCardsSection() {
     return Column(
       children: [
+        SizedBox(
+          height: 20,
+        ),
         // Work With Love Card
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Column(
-              children: [
-                const Text(
-                  'Work',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text(
-                  'With Love !',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  'Only in Bengaluru, India',
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.7),
-                    fontSize: 14,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 20),
-        // Swipe for Coupon
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
+          child: Column(
             children: [
-              Icon(Icons.home, color: Colors.white, size: 24),
-              SizedBox(width: 15),
-              Text(
-                'Swipe for Coupon',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'asset/images/image 1.png',
+                    height: 35,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    'Studio',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
               ),
+              const SizedBox(height: 10),
+              Text(
+                'Lorem Ipsum Dummy Content ',
+                style: TextStyle(color: Colors.white),
+              )
             ],
           ),
         ),
         const SizedBox(height: 20),
-        // AI for ABC Video
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Ai for ABC Video',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text(
-                  'Swipw it Now',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  'Extra charges may apply for Editing',
-                  style: TextStyle(
-                    color: Colors.white.withOpacity(0.7),
-                    fontSize: 12,
-                  ),
-                ),
-                const SizedBox(height: 15),
-                Container(
-                  width: 80,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    image: const DecorationImage(
-                      image: AssetImage('asset/images/Group 1171274916.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 20),
-        // Promotional Offers
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: const Column(
-              children: [
-                Text(
-                  '30% OFF',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  'on ABC',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Use code HGDNBHH at',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 12,
-                  ),
-                ),
-                Text(
-                  'check out',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 12,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 20),
-        // Book Videos Offer
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Text(
-                    '"Book 4 videos and receive 1 additional video for free."',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 15),
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.local_fire_department,
-                          size: 16, color: Colors.orange),
-                      SizedBox(width: 4),
-                      Text(
-                        'Swipe for Active Code > >',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 10,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
+   
+      
       ],
     );
   }
